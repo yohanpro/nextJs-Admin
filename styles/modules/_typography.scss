@@ -1,0 +1,67 @@
+// Font Type
+// $header_l: 'GenesisSansHead-Light', Arial, sans-serif;
+// $header_R: 'GenesisSansHead-Regular', Arial, sans-serif;
+$base_ff: 'YoonBlackFit55',
+Arial,
+sans-serif;
+$base_b1_ff: 'YoonBlackFit66',
+Arial,
+sans-serif;
+$base_b2_ff: 'YoonBlackFit77',
+Arial,
+sans-serif;
+$base2_ff: 'AppleSDGothicNeoR',
+Arial,
+sans-serif;
+$base2_l_ff: 'AppleSDGothicNeoT',
+Arial,
+sans-serif;
+$base2_eb_ff: 'AppleSDGothicNeoEB',
+Arial,
+sans-serif;
+$calendar_ff: 'NeoSans-Medium',
+Arial,
+sans-serif;
+
+
+// Font Size
+$small-fz: 12px;
+$base-fz: 18px;
+$base-fz2: 20px;
+$base-fz3: 14px;
+$big-fz:35px;
+// ==========================================================
+// Font type
+// ==========================================================
+// @include font-face("GenesisSansHead-Light", fonts/GenesisSansHead-Light, normal, normal);
+@include font-face("YoonBlackFit55", '/static/fonts/YoonBlackFit55', normal, normal);
+@include font-face("YoonBlackFit66", '/static/fonts/YoonBlackFit66', normal, normal);
+@include font-face("YoonBlackFit77", '/static/fonts/YoonBlackFit77', normal, normal);
+@include font-face("AppleSDGothicNeoR", '/static/fonts/AppleSDGothicNeoR', normal, normal);
+@include font-face("AppleSDGothicNeoT", '/static/fonts/AppleSDGothicNeoT', normal, normal);
+
+@include font-face("AppleSDGothicNeoEB", '/static/fonts/AppleSDGothicNeoEB', normal, normal);
+@include font-face("NeoSans-Medium", '/static/fonts/NeoSans-Medium', normal, normal);
+//@include font-face("DIGI", fonts/DS-DIGI, normal, normal);
+// ==========================================================
+// Font 
+// ==========================================================
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	font-weight: normal;
+}
+
+div,
+p,
+span,
+input,
+a,
+li {
+	font-family: $base_ff;
+	font-size: $base-fz;
+	word-break: break-word;
+}

@@ -1,0 +1,10 @@
+@import './modules/breakpoint';
+@import './modules/positions';
+@import 'modules/fontface';
+@import 'modules/typography';
+@import 'modules/colors';
+
+
+.customClassFromFile {
+  color: $gold;
+}
