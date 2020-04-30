@@ -4,21 +4,20 @@ import { withRouter } from 'next/router';
 import axios from 'axios';
 
 class Test extends React.Component {
-    static async getInitialProps({ query }) {
-        const testId = query.id;
+  static async getInitialProps({ query }) {
+    const testId = query.id;
 
-        return { testId };
-    }
+    return { testId };
+  }
 
-    render() {
-        const { testId } = this.props;
-        return (
-            <BaseLayout>
-                <h1>I am Test Page {testId}</h1>
-
-            </BaseLayout>
-        );
-    }
+  render() {
+    const { testId } = this.props;
+    return (
+      <BaseLayout>
+        <h1>I am Test Page {testId}</h1>
+      </BaseLayout>
+    );
+  }
 }
 
 export default withRouter(Test);
