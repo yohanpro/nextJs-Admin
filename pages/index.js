@@ -35,13 +35,7 @@ class Index extends SuperComponent {
     console.log(initialData);
     return (
       <BaseLayout>
-        <h1 className="fromPage">
-          {' '}
-          I am Index Page from Class Component, and I was updated!!!!
-        </h1>
-        <h2> {title} </h2>
-        <h2> {userData.title} </h2>
-        <button onClick={this.updateTitle}> Change Title </button>
+        <h1>hi</h1>
       </BaseLayout>
     );
   }
