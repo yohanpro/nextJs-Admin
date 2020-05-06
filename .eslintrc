@@ -15,7 +15,9 @@
   "rules": {
     "react/prop-types": 0,
     "react/jsx-one-expression-per-line": 0,
-    "quotes": ["error", "single", { "avoidEscape": true }],
+    "quotes": ["error", "single", {
+      "avoidEscape": true
+    }],
     "no-console": "off",
     "func-names": "off",
     "implicit-arrow-linebreak": ["error", "beside"],

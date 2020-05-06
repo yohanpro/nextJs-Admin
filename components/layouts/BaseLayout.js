@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../shared/Header";
 import Head from "next/head";
-
+import { Container, Row, Col } from 'reactstrap';
 const BaseLayout = (props) => {
   const {
     className,
@@ -13,15 +13,15 @@ const BaseLayout = (props) => {
 
   return (
     <React.Fragment>
-      <div className="layout-container">
-        <Header
-          className={`port-nav-${headerType}`}
-          user={user}
-        />
-        <main className={`cover ${className}`}>
-          <div className="wrapper">{children}</div>
-        </main>
-      </div>
+      <Container>
+        <div className="layout-container">
+          <main className={`cover ${className}`}>
+            <Row>
+              <Col md="12"><div className="wrapper">{children}</div></Col>
+            </Row>
+          </main>
+        </div>
+      </Container>
     </React.Fragment>
   );
 };
