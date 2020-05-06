@@ -19,17 +19,7 @@ class Header extends React.Component {
           <a> About </a>
         </Link>
 
-        <Link href="/portfolios">
-          <a> Portfolio </a>
-        </Link>
 
-        <Link href="/blogs">
-          <a> Blog </a>
-        </Link>
-
-        <Link href="/cv">
-          <a> CV </a>
-        </Link>
         <NextLink route="test" params={{ id: '2' }}>
           test 2
         </NextLink>

@@ -1,0 +1,26 @@
+@mixin reset-margins {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clearfix {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin clearposition {
+  position: inherit;
+  bottom: inherit;
+  top: inherit;
+  left: inherit;
+  right: inherit;
+  transform: inherit;
+}
