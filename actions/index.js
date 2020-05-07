@@ -7,6 +7,9 @@ const axiosInstance = axios.create({
 
 export const userLogin = async (userData) => {
     const url = '/auth/login';
-    console.log('baseurl', process.env.BASE_URL);
-    return await axiosInstance.post(url, userData).then(response => response.data);
+
+    return await axiosInstance.post(url, userData).then(response => {
+        console.log("userLogin -> response", response);
+        return response.data;
+    });
 };

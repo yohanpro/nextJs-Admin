@@ -1,10 +1,11 @@
 import React from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import axios from 'axios';
-import SuperComponent from '../components/SuperComponent';
 import withAuth from '../components/hoc/withAuth';
+import { Button, Container } from 'reactstrap';
+import { Router } from '../routes';
 
-class Index extends SuperComponent {
+class Index extends React.Component {
   static async getInitialProps() {
     let userData = {};
     try {
@@ -30,15 +31,15 @@ class Index extends SuperComponent {
   };
 
   render() {
-    const { title } = this.state;
-    const { userData, initialData } = this.props;
+    const { initialData } = this.props;
     console.log(initialData);
     return (
-      <BaseLayout>
-        <h1>hi</h1>
-      </BaseLayout>
+      <Container>
+        <h1>안녕하세요?</h1>
+        <Button className="mt-3" color="primary" onClick={() => Router.push('/login')}>로그인하러가기</Button>
+      </Container>
     );
   }
 }
 
-export default withAuth('ownder')(Index);
+export default Index;
