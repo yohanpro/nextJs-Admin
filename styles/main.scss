@@ -9,7 +9,14 @@
   color: $gold;
 }
 
+html,
 body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+
   @include reset-margins;
   font-size: $base-fz3;
   position: relative;
@@ -39,6 +46,9 @@ body.pc {
   .bg {
     min-height: 100%;
   }
+}
 
-
+.btn_login {
+  border: 1px solid black;
+  margin-top: 3em;
 }

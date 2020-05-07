@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../shared/Header";
 import Head from "next/head";
 import { Container, Row, Col } from 'reactstrap';
+
+
 const BaseLayout = (props) => {
   const {
     className,
@@ -16,9 +18,7 @@ const BaseLayout = (props) => {
       <Container>
         <div className="layout-container">
           <main className={`cover ${className}`}>
-            <Row>
-              <Col md="12"><div className="wrapper">{children}</div></Col>
-            </Row>
+            {children}
           </main>
         </div>
       </Container>
