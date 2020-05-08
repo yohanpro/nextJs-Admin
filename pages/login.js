@@ -2,16 +2,17 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import BaseLayout from '../components/layouts/BaseLayout';
 import { userLogin } from '../actions';
 import { Router } from '../routes';
+import { connect } from 'react-redux';
 
-import { reducer }
+
+
 const Login = (props) => {
 
     const responseGoogle = async (response) => {
         console.log(response);
-        userLogin(response)
-            .then(result => {
-                console.log(result);
-            });
+        userLogin(response).then(result => {
+            console.log(result);
+        });
     };
     return (
         <BaseLayout>
@@ -30,5 +31,7 @@ const Login = (props) => {
 
     );
 };
-
 export default Login;
+// const mapDispatchToProps
+
+// export default connect(null,)(Login);
