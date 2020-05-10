@@ -3,20 +3,24 @@ import BaseLayout from '../components/layouts/BaseLayout';
 import { userLogin } from '../actions';
 import { Router } from '../routes';
 import { useDispatch, useSelector } from 'react-redux';
+import jwt from 'jwt-simple';
+
 import * as types from '../redux/actions/ActionTypes';
 
 const Login = (props) => {
   const auth = useSelector((store) => store.auth);
-  console.log('Login -> auth', auth);
 
   const dispatch = useDispatch();
 
   const responseGoogle = async (response) => {
-    userLogin(response).then((result) => {
+    //뭐 지금은 딱히 상관없으니..
+    userLogin(response.profileObj).then((result) => {
       dispatch({
         type: types.USER_LOGIN,
         payload: result,
       });
+      localStorage.setItem('user', JSON.stringify(result));
+      Router.push('/home');
     });
   };
 
